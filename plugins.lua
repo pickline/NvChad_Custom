@@ -117,7 +117,13 @@ local plugins = {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
-    lazy = false,
+    event = "VeryLazy",
+    config = true,
+  },
+
+  {
+    "abecodes/tabout.nvim",
+    event = "VeryLazy",
     config = true,
   },
   --To make a plugin not be loaded
