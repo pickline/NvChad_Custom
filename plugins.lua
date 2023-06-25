@@ -111,6 +111,15 @@ local plugins = {
     event = "VeryLazy",
     config = true,
   },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+    lazy = false,
+    config = true,
+  },
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
