@@ -34,6 +34,9 @@ M.mason = {
     "clang-format",
 
     "gopls",
+    "goimports-reviser",
+    "golines",
+    "buf",
   },
 }
 
