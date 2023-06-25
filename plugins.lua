@@ -109,9 +109,7 @@ local plugins = {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup()
-    end,
+    config = true,
   },
   --To make a plugin not be loaded
   -- {
