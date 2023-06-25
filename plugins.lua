@@ -87,6 +87,15 @@ local plugins = {
       require("noice").setup()
     end,
   },
+
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end,
+  },
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
