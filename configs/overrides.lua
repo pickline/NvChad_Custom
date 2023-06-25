@@ -13,6 +13,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "go",
+    "proto",
   },
   indent = {
     enable = true,
@@ -27,13 +28,6 @@ M.mason = {
     -- lua stuff
     "lua-language-server",
     "stylua",
-
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "prettier",
 
     -- c/cpp stuff
     "clangd",
@@ -57,29 +51,6 @@ M.nvimtree = {
       },
     },
   },
-}
-
-M.auto_save = {
-  enable = true,
-  execution_message = {
-    message = function()
-      return ("save at " .. vim.fn.strftime "%H:%M:%S")
-    end,
-    dim = 0.18,
-    cleaning_interval = 1250,
-  },
-  trigger_events = { "InsertLeave", "TextChanged" },
-  condition = function(buf)
-    local fn = vim.fn
-    local utils = require "auto-save.utils.data"
-
-    if fn.getbufvar(buf, "&modifiable" == 1) and utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
-      return true
-    end
-    return false
-  end,
-  write_all_buffers = true,
-  debounce_delay = 135,
 }
 
 return M

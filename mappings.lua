@@ -4,6 +4,10 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<C-s>"] = { "<CMD> w <CR>", "save file", opts = { nowait = true } },
+  },
+  i = {
+    ["<C-s>"] = { "<CMD> w <CR>", "save file", opts = { nowait = true } },
   },
 }
 
@@ -52,11 +56,11 @@ M.dap_go = {
 M.gopher = {
   plugin = true,
   n = {
-    ["<leader>gtj"] = {
+    ["<leader>gaj"] = {
       "<cmd> GoTagAdd json <CR>",
       "Go struct add json tag",
     },
-    ["<leader>gty"] = {
+    ["<leader>gay"] = {
       "<cmd> GoTagAdd yaml <CR>",
       "Go struct add yaml tag",
     },
@@ -64,7 +68,7 @@ M.gopher = {
       "<cmd> GoMod tidy <CR>",
       "Go mod tidy",
     },
-    ["<leader>gta"] = {
+    ["<leader>gat"] = {
       "<cmd> GoTestAdd <CR>",
       "Go Add test",
     },

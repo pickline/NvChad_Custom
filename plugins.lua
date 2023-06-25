@@ -77,15 +77,6 @@ local plugins = {
   },
 
   {
-    "Pocco81/auto-save.nvim",
-    event = "BufEnter",
-    opts = overrides.auto_save,
-    config = function(_, opts)
-      require("auto-save").setup(opts)
-    end,
-  },
-
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {
