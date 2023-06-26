@@ -37,6 +37,10 @@ M.mason = {
     "goimports-reviser",
     "golines",
     "buf",
+    "buf-language-server",
+    "docker-compose-language-service",
+    "dockerfile-language-server",
+    "protolint",
   },
 }
 
