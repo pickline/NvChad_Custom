@@ -4,16 +4,12 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "tsx",
     "c",
     "markdown",
     "markdown_inline",
     "go",
     "proto",
+    "toml",
   },
   indent = {
     enable = true,
@@ -41,6 +37,7 @@ M.mason = {
     "docker-compose-language-service",
     "dockerfile-language-server",
     "protolint",
+    "taplo",
   },
 }
 

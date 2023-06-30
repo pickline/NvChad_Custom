@@ -43,6 +43,11 @@ local servers = {
     root_dir = util.root_pattern("docker-compose.yml", "docker-compose.yaml"),
     single_file_support = true,
   },
+  taplo = {
+    cmd = { "taplo", "lsp", "stdio" },
+    filetypes = { "toml" },
+    single_file_support = true,
+  },
 }
 
 local base_opt = {
