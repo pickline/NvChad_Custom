@@ -156,6 +156,13 @@ local plugins = {
       require("core.utils").load_mappings "crates"
     end,
   },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    init = function()
+      require("core.utils").load_mappings "trouble"
+    end,
+  },
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

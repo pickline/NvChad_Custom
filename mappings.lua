@@ -90,6 +90,15 @@ M.crates = {
     },
   },
 }
+
+M.trouble = {
+  n = {
+    ["<leader>tt"] = {
+      "<cmd> TroubleToggle<CR>",
+      "Toggle trouble.nvim's window",
+    },
+  },
+}
 -- more keybinds!
 
 return M
