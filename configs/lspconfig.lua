@@ -7,19 +7,19 @@ local util = require "lspconfig/util"
 -- if you just want default config for the servers then put them in a table
 local servers = {
   clangd = {
-    filetype = { "c", "cpp" },
+    filetypes = { "c", "cpp" },
     capabilities = {
       offsetEncoding = { "utf-16" },
     },
   },
   bufls = {
     cmd = { "bufls", "serve" },
-    filetype = { "proto" },
+    filetypes = { "proto" },
     root_dir = util.root_pattern("buf.work.yaml", ".git"),
   },
   gopls = {
     cmd = { "gopls" },
-    filetype = { "go", "gomod", "gowork", "gotmpl" },
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
     root_dir = util.root_pattern("go.work", "go.mod", ".git"),
     settings = {
       gopls = {
