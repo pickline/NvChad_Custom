@@ -1,4 +1,5 @@
 local overrides = require "custom.configs.overrides"
+local locals = require "custom.configs.config"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -162,6 +163,17 @@ local plugins = {
     init = function()
       require("core.utils").load_mappings "trouble"
     end,
+  },
+  {
+    "phaazon/hop.nvim",
+    init = function()
+      require("core.utils").load_mappings "hop"
+    end,
+    opts = locals.hop,
+    config = function(_, opts)
+      require("hop").setup(opts)
+    end,
+    lazy = false,
   },
   --To make a plugin not be loaded
   -- {
