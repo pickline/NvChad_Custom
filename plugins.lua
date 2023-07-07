@@ -195,6 +195,12 @@ local plugins = {
     config = true,
     lazy = false,
   },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false,
+    config = true,
+  },
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
