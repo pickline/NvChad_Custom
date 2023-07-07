@@ -38,6 +38,8 @@ M.mason = {
     "dockerfile-language-server",
     "protolint",
     "taplo",
+    "sqlls",
+    "sql-formatter",
   },
 }
 

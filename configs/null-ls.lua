@@ -20,6 +20,11 @@ local sources = {
   b.formatting.golines,
 
   b.formatting.buf,
+
+  b.formatting.sql_formatter,
+
+  b.diagnostics.protolint,
+  b.diagnostics.buf,
 }
 
 null_ls.setup {

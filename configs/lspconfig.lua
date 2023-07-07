@@ -48,6 +48,7 @@ local servers = {
     filetypes = { "toml" },
     single_file_support = true,
   },
+  sqlls = true,
 }
 
 local base_opt = {
@@ -56,5 +57,9 @@ local base_opt = {
 }
 
 for lsp, opt in pairs(servers) do
-  lspconfig[lsp].setup(vim.tbl_deep_extend("force", base_opt, opt))
+  if type(opt) ~= "table" and opt == true then
+    lspconfig[lsp].setup {}
+  else
+    lspconfig[lsp].setup(vim.tbl_deep_extend("force", base_opt, opt))
+  end
 end
