@@ -5,4 +5,12 @@ M.hop = {
   multi_windows = true,
 }
 
+M.toggleterm = {
+  direction = "float",
+  float_opts = {
+    border = "single",
+  },
+  shade_terminals = false,
+}
+
 return M

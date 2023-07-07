@@ -175,6 +175,22 @@ local plugins = {
     end,
     lazy = false,
   },
+  {
+    "NvChad/nvterm",
+    enabled = false,
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = locals.toggleterm,
+    cmd = "ToggleTerm",
+    init = function(_)
+      require("core.utils").load_mappings "toggleterm"
+    end,
+    config = function(_, opts)
+      require("toggleterm").setup(opts)
+    end,
+  },
+
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
