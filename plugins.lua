@@ -190,7 +190,11 @@ local plugins = {
       require("toggleterm").setup(opts)
     end,
   },
-
+  {
+    "rafcamlet/nvim-luapad",
+    config = true,
+    lazy = false,
+  },
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
