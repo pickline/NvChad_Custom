@@ -5,3 +5,7 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+--
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
