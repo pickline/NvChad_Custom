@@ -201,6 +201,31 @@ local plugins = {
     lazy = false,
     config = true,
   },
+  {
+    "rmagatti/auto-session",
+    opts = locals.auto_session,
+    config = function(_, opts)
+      require("auto-session").setup(opts)
+    end,
+    init = function(_)
+      require("core.utils").load_mappings "auto_session"
+    end,
+    event = "VeryLazy",
+  },
+  {
+    "rmagatti/session-lens",
+    dependencies = {
+      "rmagatti/auto-session",
+      "nvim-telescope/telescope.nvim",
+    },
+    opts = locals.session_lens,
+    config = function(_, opts)
+      require("session-lens").setup(opts)
+    end,
+    init = function()
+      require("core.utils").load_mappings "session_lens"
+    end,
+  },
   --To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

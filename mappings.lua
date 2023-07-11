@@ -169,6 +169,28 @@ M.toggleterm = {
     },
   },
 }
+
+M.session_lens = {
+  n = {
+    ["<leader>fs"] = {
+      "<cmd>Telescope session-lens search_session<CR>",
+      "Find sessions",
+    },
+  },
+}
+
+M.auto_session = {
+  n = {
+    ["<leader>ss"] = {
+      "<cmd>SessionSave<CR>",
+      "Save session",
+    },
+    ["<leader>sd"] = {
+      "<cmd>SessionDelete<CR>",
+      "Save session",
+    },
+  },
+}
 -- more keybinds!
 
 return M
