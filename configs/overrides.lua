@@ -10,6 +10,9 @@ M.treesitter = {
     "go",
     "proto",
     "toml",
+    "bash",
+    "rust",
+    "dockerfile",
   },
   indent = {
     enable = true,
@@ -40,6 +43,7 @@ M.mason = {
     "taplo",
     "sqlls",
     "sql-formatter",
+    "bash-language-server",
   },
 }
 
