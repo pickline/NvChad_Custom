@@ -19,7 +19,7 @@ local plugins = {
     },
     config = function()
       require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require "custom.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
 
@@ -101,8 +101,11 @@ local plugins = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     },
-    config = function()
-      require("noice").setup()
+    opts = function()
+      return require "custom.configs.noice"
+    end,
+    config = function(_, opts)
+      require("noice").setup(opts)
     end,
   },
 

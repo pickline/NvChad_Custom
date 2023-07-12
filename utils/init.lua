@@ -14,7 +14,7 @@ M.walk_path = function(path)
   end
 end
 
-M.require_dir = function(tbl, path)
+M.load_dir = function(tbl, path)
   assert(tbl, "tbl can't be nil")
   for f, t in M.walk_path(path) do
     if t == "file" and f ~= "init.lua" then
@@ -25,5 +25,18 @@ M.require_dir = function(tbl, path)
   return tbl
 end
 
-M = M.require_dir(M, "custom/utils")
+M.load_config = function(tbl, path)
+  assert(tbl, "tbl can't be nil")
+  for f, t in M.walk_path(path) do
+    if t == "file" and f ~= "init.lua" then
+      local k = string.sub(f, 0, -5)
+      local model = string.format("%s.%s", string.gsub(path, "/", "."), k)
+      tbl[k] = require(model)
+    end
+  end
+  return tbl
+end
+
+M = M.load_dir(M, "custom/utils")
+
 return M
