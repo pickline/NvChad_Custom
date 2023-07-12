@@ -191,6 +191,15 @@ M.auto_session = {
     },
   },
 }
+
+M.luapad = {
+  n = {
+    ["<leader>pd"] = {
+      "<cmd>Luapad<CR>",
+      "Open lua debug pad",
+    },
+  },
+}
 -- more keybinds!
 
 return M

@@ -1,4 +1,4 @@
-return {
+local M = {
   settings = {
     Lua = {
       diagnostics = {
@@ -17,3 +17,17 @@ return {
     },
   },
 }
+
+if vim.lsp.inlay_hint then
+  M.settings.Lua.hint = {
+    enable = true,
+    arrayIndex = "Auto",
+    await = true,
+    paramName = "All",
+    paramType = true,
+    semicolon = "SameLine",
+    setType = true,
+  }
+end
+
+return M

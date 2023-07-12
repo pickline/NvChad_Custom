@@ -195,6 +195,9 @@ local plugins = {
   },
   {
     "rafcamlet/nvim-luapad",
+    init = function(_)
+      require("core.utils").load_mappings "luapad"
+    end,
     config = true,
     lazy = false,
   },
