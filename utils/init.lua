@@ -1,15 +1,17 @@
+-- vim.loop has been deprecated in nvim:nightly but still available in nvim:0.9.x
+local uv = vim.uv or vim.loop
 local M = {}
 
 M.walk_path = function(path)
   local init_path = string.sub(vim.env.MYVIMRC, 0, -10)
   path = vim.fs.normalize(string.format("%s/lua/%s", init_path, path))
 
-  local dir = vim.loop.fs_scandir(path)
+  local dir = uv.fs_scandir(path)
   if not dir then
     return function() end
   end
   return function()
-    local n, t = vim.loop.fs_scandir_next(dir)
+    local n, t = uv.fs_scandir_next(dir)
     return n, t
   end
 end
