@@ -204,7 +204,10 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = false,
+    init = function()
+      require("core.utils").load_mappings "todo_comments"
+    end,
+    cmd = "TodoTelescope",
     config = true,
   },
   {
