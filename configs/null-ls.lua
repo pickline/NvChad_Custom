@@ -9,22 +9,18 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local b = null_ls.builtins
 
 local sources = {
-  -- Lua
   b.formatting.stylua,
-
-  -- cpp
   b.formatting.clang_format,
-
   b.formatting.gofmt,
   b.formatting.goimports_reviser,
   b.formatting.golines,
-
   b.formatting.buf,
-
   b.formatting.sql_formatter,
+  b.formatting.black,
 
   b.diagnostics.protolint,
   b.diagnostics.buf,
+
 }
 
 null_ls.setup {

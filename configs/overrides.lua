@@ -13,6 +13,7 @@ M.treesitter = {
     "bash",
     "rust",
     "dockerfile",
+    "python",
   },
   indent = {
     enable = true,
@@ -44,6 +45,8 @@ M.mason = {
     "sqlls",
     "sql-formatter",
     "bash-language-server",
+    "python-language-server",
+    "black",
   },
 }
 
